@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 131 Responsive Images</title>
+    <meta name="description" content="Responsive image practice with CSS and other elements">
+    <meta name="author" content="Oscar Moncada">
+    <link rel="stylesheet" href="/week03/styles/responsive-images.css">
+</head>
+
+<body>
+    <main>
+        <div class="hero">
+            <picture>
+                <source srcset="/week03/images/manti-medium.webp" media="(min-width: 1000px)">
+                <source srcset="/week03/images/manti-large.webp" media="(min-width: 600px)">
+                <img src="/week03/images/manti-small.webp" alt="Manti Utah Temple" width="495" height="248">
+            </picture>
+        </div>
+    </main>
+</body>
+
+</html>
