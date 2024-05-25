@@ -1,0 +1,161 @@
+html {
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+
+* {
+    box-sizing: border-box;
+    margin: auto;
+}
+
+body {
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    padding: 1rem;
+    background-color: #264653;
+    color: white;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+#reviewForm {
+    max-width: 500px;
+}
+
+#reviewForm fieldset {
+    margin: .5rem;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 1rem;
+    background-color: #aaaeba;
+}
+
+#reviewForm label {
+    display: block;
+}
+
+#reviewForm select {
+    background-color: white;
+    display: block;
+    border: solid 1px #999;
+    border-radius: 6px;
+    padding: 17px;
+    color: #555;
+    width: 100%;
+    appearance: none;
+    margin: .5rem 0;
+}
+
+#overallRating {
+    margin-top: 2.5rem;
+}
+
+#radioButtons {
+    display: flex;
+    margin: .2rem;
+}
+
+.ratingButton {
+    margin-top: .5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 12px;
+}
+
+#installLabel {
+    margin-top: 2.5rem;
+}
+
+#installDate {
+    display: block;
+    background-color: white;
+    border: solid 1px #999;
+    border-radius: 6px;
+    padding: 17px;
+    color: #555;
+    width: 100%;
+    appearance: none;
+    margin: .5rem 0;
+}
+
+#featuresLabel {
+    margin-top: 2.5rem;
+    margin-bottom: .5rem;
+}
+
+.usefulFeatures {
+    margin: .5rem 0;
+}
+
+#bottomCheckbox {
+    margin-bottom: 2.5rem;
+}
+
+#reviewLabel {
+    margin-top: 2rem;
+    margin-bottom: .5rem;
+}
+
+#writtenReview {
+    width: 100%;
+    border: solid 1px #999;
+    border-radius: 6px;
+    margin-top: .5rem;
+}
+
+#nameLabel {
+    margin-top: 2.5rem;
+}
+
+#name {
+    display: block;
+    background-color: white;
+    border: solid 1px #999;
+    border-radius: 6px;
+    padding: 17px;
+    color: #555;
+    width: 100%;
+    appearance: none;
+    margin: .5rem 0;
+}
+
+#postReview {
+    width: 100%;
+    margin-top: 2rem;
+    padding: 18px;
+    border: solid 1px #999;
+    border-radius: 6px;
+    font-size: large;
+    font-weight: bold;
+    appearance: none;
+}
+
+footer {
+    padding: 1rem;
+    background-color: #264653;
+    color: white;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.blue {
+    color: #264653;
+    font-size: smaller;
+}
+
+/* review.html */
+
+#postReviewHeading {
+    text-align: center;
+    margin-top: 10rem;
+}
+
+main p {
+    text-align: center;
+    margin: 1rem auto;
+    margin-bottom: 15rem;
+}
