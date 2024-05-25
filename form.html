@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 131 - Dynamic Web Fundamentals - Oscar Moncada Product Review Form</title>
+    <meta name="description"
+        content="This is a standard HMTL web page with an HTMl form that upon completion takes the user to a completion screen.">
+    <meta name="author" content="Oscar Moncada">
+    <link rel="stylesheet" href="styles/form.css">
+    <script src="scripts/form.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>Product Review</h1>
+    </header>
+    <main>
+        <form method="get" action="review.html" id="reviewForm">
+            <fieldset>
+
+                <label>Product Name
+                    <select name="productName" id="productName" required>
+                        <option value="" disabled selected>Select a Product &#9662;</option>
+                    </select>
+                </label>
+
+                <div id="overallRating">Overall Rating</div>
+                <div id="radioButtons">
+                    <label><input type="radio" name="starRating" value="oneStar" class="ratingButton" required>☆</label>
+                    <label><input type="radio" name="starRating" value="twoStar" class="ratingButton"
+                            required>☆☆</label>
+                    <label><input type="radio" name="starRating" value="threeStar" class="ratingButton"
+                            required>☆☆☆</label>
+                    <label><input type="radio" name="starRating" value="fourStar" class="ratingButton"
+                            required>☆☆☆☆</label>
+                    <label><input type="radio" name="starRating" value="fiveStar" class="ratingButton"
+                            required>☆☆☆☆☆</label>
+                </div>
+
+                <label id="installLabel">Date of Installation <input type="date" name="installDate" id="installDate"
+                        required></label>
+
+                <div id="featuresLabel">Which features did you find useful in the product?<br><i>(Check all that
+                        apply)</i></div>
+                <label><input type="checkbox" name="durability" value="yes" class="usefulFeatures"> Durability</label>
+                <label><input type="checkbox" name="easeOfUse" value="yes" class="usefulFeatures"> Ease of Use</label>
+                <label><input type="checkbox" name="performance" value="yes" class="usefulFeatures"> Performance</label>
+                <label><input type="checkbox" name="design" value="yes" class="usefulFeatures" id="bottomCheckbox">
+                    Design</label>
+
+                <label><span id="reviewLabel">Written Review <span class="blue">(Optional)</span></span><textarea
+                        id="writtenReview" name="writtenReview" rows="6"></textarea></label>
+
+                <label id="nameLabel">Your Name <span class="blue">(Optional)</span><input type="text" id="name"
+                        name="userName"></label>
+
+                <input id="postReview" type="submit" value="Post Review">
+
+            </fieldset>
+        </form>
+    </main>
+    <footer>
+        <p>©<span id="currentyear"></span> 😎 Oscar Moncada 😎 Valdivia Chile 🇨🇱</p>
+        <p>Last Modified: <span id="lastModified"></span></p>
+    </footer>
+</body>
+
+</html>
