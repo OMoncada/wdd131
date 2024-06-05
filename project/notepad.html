@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <!-- Meta tags for defining document settings -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 131 - Dynamic Web Fundamentals - Oscar Moncada Project</title>
+    <meta name="description" content="I want to use this site to help the user write their thoughts through notes.">
+    <meta name="author" content="Oscar Moncada">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="styles/notepad.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!-- JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="scripts/get-dates.js"></script>
+    <script src="scripts/notepad.js"></script>
+    <script src="scripts/hamburger.js"></script>
+</head>
+
+<body>
+    <header id="Header">
+        <img src="images/logo.png" alt="" class="logo">
+        <button class="hamburger" id="hamburger">
+            &#9776;
+        </button>
+        <!--Menu header-->
+        <ul class="main-menu hamburger-menu">
+            <a href="index.html" class="menu-item">HOME</a>
+            <a href="courses.html" class="menu-item">ABOUT</a>
+            <a href="form.html" class="menu-item">CONTACT</a>
+            <a href="signin.html" class="cta">SIGN IN</a>
+        </ul>
+    </header>
+
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div id="notepad">
+                    <h2>Notepad</h2>
+                    <textarea id="note-text" rows="5" cols="50"></textarea>
+                    <div>
+                        <button id="save-btn">Save Note</button>
+                        <button id="clear-btn">Clear Note</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div id="notes-container"></div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>
+            &copy;<span id="year"><!-- Copyright Year generated here by JavaScript !--></span>
+            Oscar A. Moncada - WDD 131 - Dynamic Web Fundamentals<br>
+        </p>
+        <p id="lastModified"><!-- Last modification date & time generated here by Javascript --></p>
+    </footer>
+
+</body>
+
+</html>

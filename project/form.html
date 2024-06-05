@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <!-- Meta tags for defining document settings -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 131 - Dynamic Web Fundamentals - Oscar Moncada Project</title>
+    <meta name="description"
+        content="I want to use a site to help people become better trained in using mobile devices, and for this they have to register or they can also contact us.">
+    <meta name="author" content="Oscar Moncada">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="styles/form.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!-- JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="scripts/get-dates.js"></script>
+    <script src="scripts/validate.js"></script>
+    <script src="scripts/hamburger.js"></script>
+</head>
+
+<body>
+    <header id="Header">
+        <img src="images/logo.png" alt="" class="logo">
+        <button class="hamburger" id="hamburger">
+            &#9776;
+        </button>
+        <!--Menu header-->
+        <ul class="main-menu hamburger-menu">
+            <a href="index.html" class="menu-item">HOME</a>
+            <a href="courses.html" class="menu-item">ABOUT</a>
+            <a href="form.html" class="menu-item">CONTACT</a>
+            <a href="signin.html" class="cta">SIGN IN</a>
+        </ul>
+    </header>
+    <div class="container">
+        <!-- Registration Section Header -->
+        <header>Registration</header>
+
+        <form id="registrationForm" onsubmit="return validateForm()">
+            <div class="form first">
+                <div class="details personal">
+                    <span class="title">Personal Details</span>
+
+                    <div class="fields">
+                        <div class="input-field">
+                            <label>Full Name</label>
+                            <input type="text" placeholder="Enter your name" pattern="[A-Za-z\s]+"
+                                title="Only letters and spaces allowed" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Date of Birth</label>
+                            <input type="date" placeholder="Enter birth date" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Email</label>
+                            <input type="email" placeholder="name@example.com" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Mobile Number</label>
+                            <input type="number" placeholder="Enter mobile number" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Gender</label>
+                            <select required>
+                                <option disabled selected>Select gender</option>
+                                <option>Male</option>
+                                <option>Female</option>
+                                <option>Others</option>
+                            </select>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Occupation</label>
+                            <input type="text" placeholder="Enter your occupation" pattern="[A-Za-z\s]+"
+                                title="Only letters and spaces allowed" required>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="details user">
+                    <span class="title">User Details</span>
+
+                    <div class="fields">
+                        <div class="input-field">
+                            <label>Username</label>
+                            <input type="text" placeholder="Enter your username" pattern="[A-Za-z0-9]+"
+                                title="Only letters and numbers allowed" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Password</label>
+                            <input type="password" id="password" placeholder="Enter your password" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Confirm Password</label>
+                            <input type="password" id="confirmPassword" placeholder="Re-enter your password" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Country</label>
+                            <input type="text" placeholder="Enter your country" pattern="[A-Za-z\s]+"
+                                title="Only letters and spaces allowed" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Postal Code</label>
+                            <input type="text" id="postalCode" placeholder="Enter your Postal Code" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Recovery Email</label>
+                            <input type="email" placeholder="Enter your recovery email" required>
+                        </div>
+                    </div>
+                </div>
+                <!-- Buttons for submitting and clearing the form -->
+                <div class="buttons">
+                    <button type="submit" class="submit">
+                        <span class="btnText">Submit</span>
+                        <i class="uil uil-navigator"></i>
+                    </button>
+                    <button type="button" class="clean" onclick="resetForm()">
+                        <span class="btnText">Clean</span>
+                        <i class="uil uil-trash-alt"></i>
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <!-- Thank You Modal -->
+    <div class="modal fade" id="thankYouModal" tabindex="-1" aria-labelledby="thankYouModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="thankYouModalLabel">Thank You!</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    The form has been submitted, and we will contact you shortly!
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <div class="contact-section">
+        <h2>Contact</h2>
+        <div class="contact-container">
+            <div class="contact-info">
+                <p><img src="images/localizar.png" alt="Ubicación" class="contact-icon"> Av. Italia 2331, Valdivia,
+                    Chile
+                </p>
+                <p><img src="images/correo.png" alt="Correo" class="contact-icon"> info@segure-phone.com</p>
+                <p><img src="images/call.png" alt="Llamada" class="contact-icon"> +56 9 3590 5797</p>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com"><img src="images/facebook.png" alt="Facebook"></a>
+                    <a href="https://www.instagram.com"><img src="images/instagram.png" alt="Instagram"></a>
+                    <a href="https://www.linkedin.com"><img src="images/link.png" alt="LinkedIn"></a>
+                </div>
+            </div>
+            <div class="contact-map">
+                <!-- Embed Google Map here -->
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.019033158198!2d-73.23450438468107!3d-39.81920627943986!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x96029b72a0b5a52b%3A0x8e8af1234567890!2sAv.%20Italia%202331%2C%20Valdivia%2C%20Chile!5e0!3m2!1sen!2sus!4v1620204506454!5m2!1sen!2sus"
+                    width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        &copy;<span id="year"><!-- Copyright Year generated here by JavaScript !--></span>
+        Oscar A. Moncada - WDD 131 - Dynamic Web Fundamentals<br>
+        </p>
+        <p id="lastModified"><!-- Last modification date & time generated here by Javascript --></p>
+    </footer>
+
+</body>
+
+</html>
