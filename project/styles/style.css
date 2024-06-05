@@ -22,31 +22,24 @@ body .container {
   justify-content: space-between;
   align-items: center;
   padding: 0 5%;
-  box-sizing: border-box;
   height: 80px;
-  /* Ajusta la altura según tu preferencia */
   background-color: #121212;
-  /* Fondo azul marino */
   z-index: 1000;
-  /* Asegura que el encabezado esté por encima de la imagen */
 }
 
 .logo {
   height: 75%;
   transition: transform 0.3s ease;
-  /* Agregar transición de 0.3 segundos */
 }
 
 .logo:hover {
   transform: scale(1.1);
-  /* Aumentar la escala al 110% al pasar el mouse */
 }
 
 .main-menu {
   display: flex;
   list-style-type: none;
   justify-content: center;
-  /* Alinea los elementos horizontalmente */
   align-items: center;
   text-decoration: none;
 }
@@ -54,14 +47,18 @@ body .container {
 .menu-item {
   margin: 0 1rem;
   font-weight: 600;
-  cursor: pointer;
-  transition: color 0.5s;
   color: #f2f2f2;
-  padding-top: 13px;
-  /* Añadir esta línea */
   text-decoration: none;
-  /* Evita el subrayado en los enlaces */
+  padding-top: 13px;
+  transition: color 0.5s;
+  text-decoration: none;
 }
+
+.menu-item:hover {
+  color: #04548a;
+  transition: background-color 0.5s;
+}
+
 
 .cta {
   padding: 10px 24px;
@@ -70,10 +67,9 @@ body .container {
   color: #f2f2f2;
   margin: 0 1rem;
   font-weight: 600;
-  cursor: pointer;
-  transition: background-color 0.5s;
   margin-top: 13px;
   text-decoration: none;
+  transition: background-color 0.5s;
 }
 
 .cta:hover {
@@ -81,11 +77,6 @@ body .container {
   background-color: #04548a;
 }
 
-.menu-item:hover {
-  color: var(--main-color);
-}
-
-/* Hamburger button */
 .hamburger {
   display: none;
   font-size: 24px;
@@ -95,10 +86,9 @@ body .container {
   cursor: pointer;
 }
 
-/* Responsive Styles */
 @media (max-width: 768px) {
   .hamburger {
-    display: block;
+    display: flex;
   }
 
   .hamburger-menu {
@@ -110,6 +100,7 @@ body .container {
     top: 80px;
     left: 0;
     z-index: 999;
+    line-height: 2.5;
   }
 
   .hamburger-menu.active {
@@ -119,93 +110,33 @@ body .container {
   .menu-item {
     width: 100%;
     text-align: center;
-    padding: 10px 0;
   }
 
   .cta {
     width: 100%;
     text-align: center;
-    margin-top: 10px;
+
   }
 }
 
 .about__icons img {
   width: 40px;
   transition: transform 0.5s ease-in-out;
-  /* Aumenta la duración de la transición */
 }
 
 .about__icons img:hover {
   transform: scale(1.2);
-  /* Aumenta el tamaño al hacer hover */
 }
 
+/* Additional CSS styles here */
 
 .hero {
   height: 100vh;
-  width: auto;
   display: flex;
   justify-content: flex-start;
   align-items: center;
   position: relative;
-}
-
-.hero::-webkit-scrollbar {
-  display: none;
-}
-
-.hero {
-  -ms-overflow-style: none;
-  /* IE and Edge */
-  scrollbar-width: none;
-  /* Firefox */
-}
-
-.hero__indicators {
-  position: absolute;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.hero__indicator {
-  height: 10px;
-  width: 10px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  margin: 0 5px;
-  cursor: pointer;
-}
-
-.hero__indicator.active {
-  background-color: #fff;
-}
-
-@keyframes slideshow {
-  0% {
-    transform: translateX(0);
-  }
-
-  30% {
-    transform: translateX(0);
-  }
-
-  33.33% {
-    transform: translateX(-100vw);
-  }
-
-  63% {
-    transform: translateX(-100vw);
-  }
-
-  66.66% {
-    transform: translateX(-200vw);
-  }
-
-  97% {
-    transform: translateX(-200vw);
-  }
+  overflow: hidden;
 }
 
 .hero__image-container {
@@ -218,29 +149,18 @@ body .container {
   overflow: hidden;
 }
 
-.hero__image-container::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: transparent;
-}
-
 .hero__image {
   width: 100%;
 }
 
 .hero__text-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  flex-direction: column;
   position: absolute;
   bottom: 40%;
   left: 100px;
   z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .hero__title {
@@ -251,12 +171,11 @@ body .container {
 }
 
 .hero__button {
-  text-transform: uppercase;
   font-size: 18px;
   padding: 15px 25px;
   border-radius: 50px;
   color: #ffffff;
-  background-color: #0089e4;
+  background-color: var(--main-color);
   text-decoration: none;
   margin-top: 20px;
 }
@@ -265,20 +184,46 @@ body .container {
   background-color: black;
 }
 
-@media (max-width: 768px) {
+.hero__indicators {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
 
+.hero__indicator {
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  display: inline-block;
+  margin: 0 5px;
+  cursor: pointer;
+  background-color: transparent;
+  border: 2px solid #fff;
+}
+
+.hero__indicator.active {
+  background-color: #fff;
+}
+
+@media (max-width: 768px) {
   .hero__title {
-    font-size: 40px;
+    font-size: 35px;
     margin-left: -90px;
+    margin-top: 40px;
+    margin-bottom: 10px;
   }
 
   .hero__button {
-    font-size: 20px;
-    padding: 5px 10px;
-    margin-top: auto;
-    margin-bottom: 100px;
-    margin-left: -90px;
-
+    font-size: 14px;
+    padding: 15px 25px;
+    border-radius: 30px;
+    color: #ffffff;
+    background-color: var(--main-color);
+    text-decoration: none;
+    margin-top: 20px;
+    margin-bottom: 80px;
+    margin-left: -50px;
   }
 
   .hero__indicators {
@@ -334,6 +279,7 @@ body .container {
   width: 260px;
   overflow: hidden;
   margin: 0 auto;
+  list-style-type: none;
 }
 
 .about__icon {
