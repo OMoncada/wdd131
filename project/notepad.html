@@ -9,17 +9,20 @@
     <meta name="description" content="I want to use this site to help the user write their thoughts through notes.">
     <meta name="author" content="Oscar Moncada">
 
-    <!-- Stylesheets -->
+    <!-- Load CSS Asynchronously -->
     <link rel="stylesheet" href="styles/notepad.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css"
+        media="print" onload="this.media='all'">
+    <noscript>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css">
+    </noscript>
 
-    <!-- JavaScript -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="scripts/get-dates.js"></script>
-    <script src="scripts/notepad.js"></script>
-    <script src="scripts/hamburger.js"></script>
+    <!-- Preload Google Fonts -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" as="style"
+        onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    </noscript>
 </head>
 
 <body>
@@ -36,16 +39,15 @@
             <a href="signin.html" class="cta">SIGN IN</a>
         </ul>
     </header>
-
     <div class="container">
         <div class="row">
             <div class="col">
                 <div id="notepad">
-                    <h2>Notepad</h2>
+                    <label for="note-text">Notas:</label>
                     <textarea id="note-text" rows="5" cols="50"></textarea>
                     <div>
-                        <button id="save-btn">Save Note</button>
-                        <button id="clear-btn">Clear Note</button>
+                        <button id="save-btn">Guardar Nota</button>
+                        <button id="clear-btn">Borrar Nota</button>
                     </div>
                 </div>
             </div>
@@ -63,6 +65,12 @@
         <p id="lastModified"><!-- Last modification date & time generated here by Javascript --></p>
     </footer>
 
+    <!-- Defer Non-Critical JS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" defer></script>
+    <script src="scripts/get-dates.js" defer></script>
+    <script src="scripts/notepad.js" defer></script>
+    <script src="scripts/hamburger.js" defer></script>
 </body>
 
 </html>
