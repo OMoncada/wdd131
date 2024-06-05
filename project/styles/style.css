@@ -458,6 +458,14 @@ body .container {
 
 /* testimony */
 
+.testimony-title {
+  text-align: center;
+  font-size: 3rem;
+  margin-top: 200px;
+  margin-bottom: -50px;
+}
+
+
 .testimony {
   height: 450px;
 }
