@@ -520,6 +520,22 @@ body .container {
   cursor: pointer;
 }
 
+.clic-link {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #000000;
+  color: #fff;
+  text-decoration: none;
+  transition: background-color 0.3s;
+  border-radius: 30px;
+  font-size: 20px;
+}
+
+.clic-link:hover {
+  background-color: #0056b3;
+}
+
+
 footer {
   background-color: #000000;
   color: white;
