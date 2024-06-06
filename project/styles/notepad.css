@@ -94,8 +94,9 @@ body .container {
 
 /* Estilos responsive */
 @media (max-width: 768px) {
+
     .hamburger {
-        display: block;
+        display: flex;
     }
 
     .hamburger-menu {
@@ -107,6 +108,7 @@ body .container {
         top: 80px;
         left: 0;
         z-index: 999;
+        line-height: 2.5;
     }
 
     .hamburger-menu.active {
@@ -116,73 +118,60 @@ body .container {
     .menu-item {
         width: 100%;
         text-align: center;
-        padding: 10px 0;
     }
 
     .cta {
         width: 100%;
         text-align: center;
-        margin-top: 10px;
-    }
 
-    #notes-container {
-        max-width: 100%;
-        width: 100%;
-    }
-
-    .note-item {
-        font-size: 14px;
-        margin-top: 5px;
     }
 }
 
-#notepad {
-    background-color: #fff;
-    border: 2px solid #ddd;
+.container {
+    max-width: 600px;
+    width: 100%;
     padding: 20px;
-    margin: 20px auto;
-    width: 70%;
-    max-width: 800px;
+    background-color: #fff;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+#notepad {
+    text-align: center;
+    margin-bottom: 20px;
 }
 
 #notepad h2 {
     margin-bottom: 10px;
-    font-size: 20px;
+    font-size: 24px;
+    color: var(--main-color);
 }
 
 #note-text {
     width: 100%;
     padding: 10px;
     margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
 }
 
 #save-btn,
 #clear-btn {
     padding: 10px 20px;
-    margin-right: 10px;
+    margin: 5px;
     cursor: pointer;
+    border: none;
+    border-radius: 5px;
 }
 
 #save-btn {
-    background-color: #0089e4;
+    background-color: var(--main-color);
     color: #fff;
-    border: none;
 }
 
 #clear-btn {
     background-color: #ddd;
     color: #000;
-    border: none;
-}
-
-.sticker {
-    background-color: #ffcc00;
-    padding: 10px;
-    margin: 10px;
-    display: inline-block;
-    border-radius: 5px;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .note-item {
@@ -192,8 +181,6 @@ body .container {
     background-color: #f9f9f9;
     border-radius: 5px;
     position: relative;
-    overflow: auto;
-    max-height: 150px;
 }
 
 .note-item .delete-btn {
@@ -201,27 +188,45 @@ body .container {
     top: 50%;
     right: 5px;
     transform: translateY(-50%);
-    z-index: 1;
     color: red;
     background: none;
     border: none;
     cursor: pointer;
+    font-size: 16px;
 }
+
 
 /* Responsive styles for notes */
 @media (max-width: 768px) {
 
-    /* Makes the notepad occupy full width on mobile devices */
-    #notepad {
-        width: 100%;
-        max-width: none;
-        margin-bottom: 20px;
-        /* Adjusts the bottom margin of the notepad on mobile devices */
+    .container {
+        max-width: 100%;
+        padding: 10px;
     }
 
-    /* Adjusts the top margin of the notes on mobile devices */
+    #notepad,
     #notes-container {
-        margin-top: 20px;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    #note-text {
+        font-size: 14px;
+    }
+
+    #save-btn,
+    #clear-btn {
+        width: 100%;
+        margin: 10px 0;
+        font-size: 14px;
+    }
+
+    .note-item {
+        font-size: 12px;
+    }
+
+    .note-item .delete-btn {
+        font-size: 12px;
     }
 }
 
