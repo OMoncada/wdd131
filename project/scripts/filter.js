@@ -22,21 +22,21 @@ document.addEventListener("DOMContentLoaded", () => {
             category: "online",
         },
         {
-            title: "Cell Phones in the Modern Era",
+            title: "Cell Phones currently in the Modern Era",
             date: "15 August, 2024 (17:00hrs)",
             mode: "In-person",
             imgSrc: "images/4.jpeg",
             category: "person",
         },
         {
-            title: "Cell Phone Use in Children",
+            title: "Cell Phone Use in Children currently",
             date: "16 September, 2024 (17:00hrs)",
             mode: "100% online",
             imgSrc: "images/5.jpeg",
             category: "online",
         },
         {
-            title: "Cell Phone Care currently",
+            title: "Cell Phone Care in the Modern Era ",
             date: "17 September, 2024 (17:00hrs)",
             mode: "Flex",
             imgSrc: "images/6.jpeg",
@@ -65,10 +65,10 @@ document.addEventListener("DOMContentLoaded", () => {
     <div class="card p-0" data-name="${course.category}">
         <img src="${course.imgSrc}" alt="img" />
         <div class="card-body text-center">
-            <h6 class="card-title">${course.title}</h6>
+        <h6 class="card-title" style="font-size: 1rem;">${course.title}</h6>
             <p class="card-text">${course.date}</p>
             <p class="card-text">${course.mode}</p>
-            <a href="courses.html" class="btn btn-primary mt-2 choose-button">Choose</a>
+            <a href="courses.html" class="btn choose-button-style mt-2 choose-button">Choose</a>
         </div>
     </div>
 `;
