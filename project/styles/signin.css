@@ -56,6 +56,7 @@ body .container {
     text-decoration: none;
 }
 
+
 .cta {
     padding: 10px 24px;
     border-radius: 30px;
@@ -76,8 +77,9 @@ body .container {
 
 .menu-item:hover {
     color: var(--main-color);
+    transition: color 0.5s;
+    /* Agrega una transición de 0.5 segundos al color */
 }
-
 
 /* Hamburger button */
 .hamburger {
@@ -122,22 +124,6 @@ body .container {
         margin-top: 10px;
     }
 }
-
-footer {
-    background-color: #000000;
-    color: white;
-    text-align: center;
-    padding: 20px;
-    margin-top: 60px;
-    font-size: 15px;
-    line-height: 1;
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-}
-
-
 
 /* config.css */
 
@@ -188,6 +174,11 @@ footer {
     fill: var(--iconFill);
     inline-size: 1em;
     vertical-align: middle;
+}
+
+.text--center a {
+    color: #4362eb;
+    /* Cambia el color del enlace "Sign in" a rojo, puedes usar el color que desees */
 }
 
 /* layout/base.css */
@@ -350,4 +341,15 @@ p {
 
 .text--center {
     text-align: center;
+}
+
+footer {
+    background-color: #000000;
+    color: white;
+    text-align: center;
+    padding: 3px;
+    /* Reducir el padding vertical (10px) y horizontal (20px) */
+    margin-top: 85px;
+    font-size: 15px;
+    line-height: 1;
 }
