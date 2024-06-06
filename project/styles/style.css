@@ -7,9 +7,13 @@
 }
 
 body {
+  margin: 0;
+  padding: 0;
   width: 100%;
   position: relative;
   background: #f1f1f1 !important;
+  overflow-x: hidden;
+  /* Evitar desbordamiento horizontal */
 }
 
 body .container {
@@ -39,9 +43,11 @@ body .container {
 .main-menu {
   display: flex;
   list-style-type: none;
-  justify-content: center;
+  justify-content: flex-start;
+  /* Alinea los elementos del menú hacia la izquierda */
   align-items: center;
   text-decoration: none;
+  margin-right: 70px;
 }
 
 .menu-item {
@@ -52,6 +58,12 @@ body .container {
   padding-top: 13px;
   transition: color 0.5s;
   text-decoration: none;
+}
+
+/* Ajustar el margen izquierdo de los elementos del menú */
+.menu-item:first-child {
+  margin-left: 10px;
+  /* Ajusta según sea necesario */
 }
 
 .menu-item:hover {
@@ -69,13 +81,15 @@ body .container {
   font-weight: 600;
   margin-top: 13px;
   text-decoration: none;
-  transition: background-color 0.5s;
+  transition: background-color 1s, color 1s;
+  /* Modificado a 1s */
 }
 
 .cta:hover {
   color: #f2f2f2;
   background-color: #0089e4;
 }
+
 
 .hamburger {
   display: none;
@@ -89,6 +103,7 @@ body .container {
 @media (max-width: 768px) {
   .hamburger {
     display: flex;
+    margin-right: 50px;
   }
 
   .hamburger-menu {
@@ -337,8 +352,9 @@ body .container {
   margin-top: 100px;
   text-align: center;
   text-decoration: underline;
-  margin-bottom: -100px;
   font-size: 2.5rem;
+  margin-top: 150px;
+  margin-bottom: -350px;
 }
 
 
@@ -352,6 +368,21 @@ body .container {
   justify-content: center;
   min-height: 100vh;
   /* Ajusta la altura según tus necesidades */
+  font-size: 15px;
+}
+
+#filter-buttons .btn {
+  margin-right: 1rem;
+  /* Ajusta el valor para aumentar el espacio entre los botones */
+  font-size: 1.5rem;
+  /* Ajusta el tamaño de la fuente según tus necesidades */
+  word-spacing: 0.5rem;
+  /* Ajusta el espacio entre palabras según tus necesidades */
+}
+
+#filter-buttons .btn:last-child {
+  margin-right: 0;
+  /* Elimina el margen derecho del último botón */
 }
 
 #filter-buttons {
@@ -390,6 +421,13 @@ body .container {
   /* Ajusta el margen entre las tarjetas según sea necesario */
   border: 2px solid transparent;
   transition: transform 0.3s ease, border-color 0.3s ease;
+  background-color: #ffffff;
+  /* Blanco */
+  border: 1px solid #ddd;
+  /* Borde gris claro */
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
 }
 
 #filterable-cards .card img {
@@ -408,6 +446,25 @@ body .container {
   display: none;
 }
 
+.choose-button-style {
+  font-size: 15px;
+  padding: 3px 7px;
+  border-radius: 50px;
+  color: #ffffff;
+  background-color: #0089e4;
+  /* Azul */
+  text-decoration: none;
+  transition: background-color 0.3s;
+  display: inline-block;
+  /* Asegura que se comporte como un botón */
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.choose-button-style:hover {
+  background-color: #005bb5;
+  /* Azul oscuro en hover */
+}
 
 @media (max-width: 600px) {
   #filterable-cards {
@@ -416,6 +473,15 @@ body .container {
 
   #filterable-cards .card {
     width: calc(100% / 2 - 10px);
+  }
+
+  #filter-buttons .btn {
+    font-size: 1rem;
+    margin-top: 180px;
+  }
+
+  .workshops-title {
+    font-size: 2.5rem;
   }
 }
 
@@ -428,7 +494,7 @@ body .container {
 .notes-container {
   text-align: center;
   margin: 20px 0;
-  margin-top: 100px;
+  margin-top: 80px;
   background-color: #0089e4;
   padding: 20px;
 }
@@ -461,8 +527,8 @@ body .container {
 .testimony-title {
   text-align: center;
   font-size: 3rem;
-  margin-top: 200px;
-  margin-bottom: -50px;
+  margin-top: 120px;
+  margin-bottom: -200px;
 }
 
 
@@ -535,21 +601,31 @@ body .container {
   background-color: #0056b3;
 }
 
-
 footer {
   background-color: #000000;
   color: white;
   text-align: center;
   padding: 20px;
-  margin-top: 78px;
   font-size: 15px;
   line-height: 1;
+  margin-top: 270px;
 }
 
 @media (max-width: 768px) {
-  footer {
-    margin-top: 450px;
+  .testimony-title {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 40px;
   }
+
+  .testimony__container {
+    margin-top: -100px;
+  }
+
+  footer {
+    margin-top: 500px;
+  }
+
 }
 
 
