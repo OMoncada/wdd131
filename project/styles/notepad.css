@@ -156,7 +156,7 @@ body .container {
 #notepad h2 {
     margin-bottom: 10px;
     font-size: 24px;
-    color: var(--main-color);
+    color: #04548a;
 }
 
 #note-text {
@@ -177,7 +177,7 @@ body .container {
 }
 
 #save-btn {
-    background-color: var(--main-color);
+    background-color: #04548a;
     color: #fff;
 }
 
