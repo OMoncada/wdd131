@@ -125,6 +125,18 @@ body .container {
     }
 }
 
+footer {
+    background-color: #000000;
+    color: white;
+    text-align: center;
+    padding: 10px 20px;
+    /* Reducir el padding vertical (10px) y horizontal (20px) */
+    margin-top: 40px;
+    /* Ajustar el margen superior según sea necesario */
+    font-size: 15px;
+    line-height: 1;
+}
+
 /* config.css */
 
 :root {
@@ -174,11 +186,6 @@ body .container {
     fill: var(--iconFill);
     inline-size: 1em;
     vertical-align: middle;
-}
-
-.text--center a {
-    color: #0056b3;
-    /* Cambia el color del enlace "Sign in" a rojo, puedes usar el color que desees */
 }
 
 /* layout/base.css */
@@ -284,7 +291,9 @@ input[type="submit"] {
     --loginLabelBackgroundColor: #363b41;
 
     --loginSubmitBackgroundColor: #0056b3;
-    --loginSubmitColor: #eee;
+    /* Cambiar el color de fondo del botón "Sign in" */
+    --loginSubmitColor: #ffffff;
+    /* Cambiar el color del texto del botón "Sign in" */
     --loginSubmitHoverBackgroundColor: #0056b3;
 }
 
@@ -343,13 +352,6 @@ p {
     text-align: center;
 }
 
-footer {
-    background-color: #000000;
-    color: white;
-    text-align: center;
-    padding: 3px;
-    /* Reducir el padding vertical (10px) y horizontal (20px) */
-    margin-top: 85px;
-    font-size: 15px;
-    line-height: 1;
+.text--center a {
+    color: #0056b3;
 }
