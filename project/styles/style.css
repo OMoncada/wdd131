@@ -1,34 +1,39 @@
-/* Enlace CSS utilizando variables */
 .link-primary {
-  color: var(--clr-primary-5);
+  color: var(--main-color);
 }
 
 .link-secondary {
-  color: var(--clr-grey-5);
+  color: var(--second-color);
 }
 
 .link-success {
-  color: var(--clr-green-dark);
+  color: #0089e4;
+  /* Puedes cambiar este color según sea necesario */
 }
 
 .link-info {
-  color: var(--clr-primary-6);
+  color: #404145;
+  /* Puedes cambiar este color según sea necesario */
 }
 
 .link-warning {
-  color: var(--clr-red-light);
+  color: #04548a;
+  /* Puedes cambiar este color según sea necesario */
 }
 
 .link-danger {
-  color: var(--clr-red-dark);
+  color: #f2f2f2;
+  /* Puedes cambiar este color según sea necesario */
 }
 
 .link-light {
-  color: var(--clr-grey-10);
+  color: #fff;
+  /* Puedes cambiar este color según sea necesario */
 }
 
 .link-dark {
-  color: var(--clr-grey-1);
+  color: #121212;
+  /* Puedes cambiar este color según sea necesario */
 }
 
 * {
