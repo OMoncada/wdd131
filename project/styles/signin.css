@@ -177,7 +177,7 @@ body .container {
 }
 
 .text--center a {
-    color: #4362eb;
+    color: #0056b3;
     /* Cambia el color del enlace "Sign in" a rojo, puedes usar el color que desees */
 }
 
@@ -283,9 +283,9 @@ input[type="submit"] {
 
     --loginLabelBackgroundColor: #363b41;
 
-    --loginSubmitBackgroundColor: #ea4c88;
+    --loginSubmitBackgroundColor: #0056b3;
     --loginSubmitColor: #eee;
-    --loginSubmitHoverBackgroundColor: #d44179;
+    --loginSubmitHoverBackgroundColor: #0056b3;
 }
 
 .login {
