@@ -90,7 +90,8 @@ body .container {
 /* Responsive Styles */
 @media (max-width: 768px) {
   .hamburger {
-    display: block;
+    display: flex;
+    margin-right: 50px;
   }
 
   .hamburger-menu {
@@ -102,6 +103,7 @@ body .container {
     top: 80px;
     left: 0;
     z-index: 999;
+    line-height: 2.5;
   }
 
   .hamburger-menu.active {
@@ -111,13 +113,12 @@ body .container {
   .menu-item {
     width: 100%;
     text-align: center;
-    padding: 10px 0;
   }
 
   .cta {
     width: 100%;
     text-align: center;
-    margin-top: 10px;
+
   }
 }
 
