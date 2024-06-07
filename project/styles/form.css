@@ -263,7 +263,7 @@ select {
     color: #fff;
     border-radius: 5px;
     margin: 25px 0;
-    background-color: #4070f4;
+    background-color: #04548a;
     transition: all 0.3s linear;
     cursor: pointer;
 }
@@ -274,7 +274,7 @@ select {
 }
 
 form button:hover {
-    background-color: #265df2;
+    background-color: #04548a;
 }
 
 form button i,
@@ -319,12 +319,12 @@ footer {
 }
 
 .container form .clean {
-    background-color: #e74c3c;
+    background-color: #780000;
     /* Color rojo */
 }
 
 .container form .clean:hover {
-    background-color: #c0392b;
+    background-color: #780000;
     /* Color rojo oscuro */
 }
 
