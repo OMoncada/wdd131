@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <!-- Meta tags for defining document settings -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 131 - Dynamic Web Fundamentals - Oscar Moncada Project</title>
+    <meta name="description" content="I want to use this site to help the user write their thoughts through notes.">
+    <meta name="author" content="Oscar Moncada">
+
+    <!-- Load CSS Asynchronously -->
+    <link rel="stylesheet" href="styles/notepad.css">
+
+    <!-- Preload Google Fonts -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" as="style"
+        onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    </noscript>
+</head>
+
+<body>
+    <header id="Header">
+        <img src="images/logo.webp" alt="Company Logo" class="logo" loading="lazy">
+        <button class="hamburger" id="hamburger">&#9776;</button>
+        <ul class="main-menu hamburger-menu">
+            <li><a href="index.html" class="menu-item">HOME</a></li>
+            <li><a href="courses.html" class="menu-item">ABOUT</a></li>
+            <li><a href="form.html" class="menu-item">CONTACT</a></li>
+            <li><a href="signin.html" class="cta">SIGN IN</a></li>
+        </ul>
+    </header>
+    <main class="main-content">
+        <div class="container">
+            <div id="notepad">
+                <h2>Notas</h2>
+                <label for="note-text">Escribe tu nota aquí:</label>
+                <textarea id="note-text" rows="5" cols="50"></textarea>
+                <div>
+                    <button id="save-btn">Guardar</button>
+                    <button id="clear-btn">Borrar</button>
+                </div>
+            </div>
+            <div id="notes-container"></div>
+        </div>
+    </main>
+    <footer>
+        <p>
+            &copy;<span id="year"><!-- Copyright Year generated here by JavaScript !--></span>
+            Oscar A. Moncada - WDD 131 - Dynamic Web Fundamentals<br>
+        </p>
+        <p id="lastModified"><!-- Last modification date & time generated here by Javascript --></p>
+    </footer>
+
+    <!-- Defer Non-Critical JS -->
+    <script src="scripts/get-dates.js" defer></script>
+    <script src="scripts/notepad.js" defer></script>
+    <script src="scripts/hamburger.js" defer></script>
+</body>
+
+</html>

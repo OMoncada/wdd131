@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <!-- Meta tags for defining document settings -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 131 - Dynamic Web Fundamentals - Oscar Moncada Project</title>
+    <meta name="description"
+        content="I want to use a site to help people become better trained in using mobile devices, and for this they have to register or they can also contact us.">
+    <meta name="author" content="Oscar Moncada">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="styles/form.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <header id="Header">
+        <img src="images/logo.webp" alt="Company Logo" class="logo" loading="lazy">
+        <button class="hamburger" id="hamburger">&#9776;</button>
+        <ul class="main-menu hamburger-menu">
+            <li><a href="index.html" class="menu-item">HOME</a></li>
+            <li><a href="courses.html" class="menu-item">ABOUT</a></li>
+            <li><a href="form.html" class="menu-item">CONTACT</a></li>
+            <li><a href="signin.html" class="cta">SIGN IN</a></li>
+        </ul>
+    </header>
+    <div class="container">
+        <!-- Registration Section Header -->
+        <header>Registration</header>
+
+        <form id="registrationForm" onsubmit="return validateForm()">
+            <div class="form first">
+                <div class="details personal">
+                    <span class="title">Personal Details</span>
+
+                    <div class="fields">
+                        <div class="input-field">
+                            <label>Full Name</label>
+                            <input type="text" placeholder="Enter your name" pattern="[A-Za-z\s]+"
+                                title="Only letters and spaces allowed" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Date of Birth</label>
+                            <input type="date" placeholder="Enter birth date" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Email</label>
+                            <input type="email" placeholder="name@example.com" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Mobile Number</label>
+                            <input type="number" placeholder="Enter mobile number" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label for="gender">Gender</label>
+                            <select id="gender" required>
+                                <option disabled selected>Select gender</option>
+                                <option>Male</option>
+                                <option>Female</option>
+                                <option>Others</option>
+                            </select>
+                        </div>
+
+
+                        <div class="input-field">
+                            <label>Occupation</label>
+                            <input type="text" placeholder="Enter your occupation" pattern="[A-Za-z\s]+"
+                                title="Only letters and spaces allowed" required>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="details user">
+                    <span class="title">User Details</span>
+
+                    <div class="fields">
+                        <div class="input-field">
+                            <label>Username</label>
+                            <input type="text" placeholder="Enter your username" pattern="[A-Za-z0-9]+"
+                                title="Only letters and numbers allowed" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Password</label>
+                            <input type="password" id="password" placeholder="Enter your password" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Confirm Password</label>
+                            <input type="password" id="confirmPassword" placeholder="Re-enter your password" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Country</label>
+                            <input type="text" placeholder="Enter your country" pattern="[A-Za-z\s]+"
+                                title="Only letters and spaces allowed" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Postal Code</label>
+                            <input type="text" id="postalCode" placeholder="Enter your Postal Code" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Recovery Email</label>
+                            <input type="email" placeholder="Enter your recovery email" required>
+                        </div>
+                    </div>
+                </div>
+                <!-- Buttons for submitting and clearing the form -->
+                <div class="buttons">
+                    <a href="thankyou.html" style="text-decoration: none; color: inherit;"></a>
+                    <button type="submit" class="submit">
+                        <span class="btnText">Submit</span>
+                        <i class="uil uil-navigator"></i>
+                    </button>
+                    <button type="button" class="clean" onclick="resetForm()">
+                        <span class="btnText">Clean</span>
+                        <i class="uil uil-trash-alt"></i>
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <!-- Contact Section -->
+    <div class="contact-section">
+        <h2>Contact</h2>
+        <div class="contact-container">
+            <div class="contact-info">
+                <p><img src="images/localizar.png" alt="Ubicación" class="contact-icon"> Av. Italia 2331, Valdivia,
+                    Chile
+                </p>
+                <p><img src="images/correo.png" alt="Correo" class="contact-icon"> info@segure-phone.com</p>
+                <p><img src="images/call.png" alt="Llamada" class="contact-icon"> +56 9 3590 5797</p>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com"><img src="images/facebook.png" alt="Facebook"></a>
+                    <a href="https://www.instagram.com"><img src="images/instagram.png" alt="Instagram"></a>
+                    <a href="https://www.linkedin.com"><img src="images/link.png" alt="LinkedIn"></a>
+                </div>
+            </div>
+            <div class="contact-map">
+                <!-- Embed Google Map here -->
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d196114.61357009824!2d-73.5218627874828!3d-39.82289649039315!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9615ee891aab33e5%3A0x35c9b4ab79b2d79b!2sValdivia%2C%20Los%20R%C3%ADos!5e0!3m2!1ses-419!2scl!4v1717612280763!5m2!1ses-419!2scl"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade" title="Mapa de Valdivia, Los Ríos"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        &copy;<span id="year"><!-- Copyright Year generated here by JavaScript !--></span>
+        Oscar A. Moncada - WDD 131 - Dynamic Web Fundamentals<br>
+        </p>
+        <p id="lastModified"><!-- Last modification date & time generated here by Javascript --></p>
+    </footer>
+    <!-- JavaScript -->
+    <script src="scripts/get-dates.js"></script>
+    <script src="scripts/validate.js"></script>
+    <script src="scripts/hamburger.js"></script>
+</body>
+
+</html>
